@@ -10,3 +10,8 @@ RUN apt update && apt install -y openssh-server netcat \
  && echo 'root:password' | chpasswd \
  && sed -i 's/\#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
