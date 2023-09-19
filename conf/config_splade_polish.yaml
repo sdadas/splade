@@ -1,7 +1,7 @@
 # FILES
 defaults: # (these specify which config FILES to use)
   ############## TRAIN ###################################
-  - train/config: splade
+  - train/config: polish
   - train/data: distil_from_ensemble
   - train/model: polish
   ############## INDEX ###################################
